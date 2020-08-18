@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Random</title>
+
+		<!--*****Font Awesome CDN*****-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		/>
+
+		<!--******OWN Stylesheet*****-->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="navWrapper">
+			<!--*****Toogle button****-->
+			<div class="btnWrapper">
+				<div class="toggleBtn btnPicker">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+
+			<!--*****NAv part****-->
+			<ul class="nav navPicker">
+				<!--******Close icon*****-->
+				<div class="iconWrapper">
+					<i class="fa fa-times closeIconPicker" aria-hidden="true"></i>
+				</div>
+
+				<!--******MEnu part*****-->
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Information</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div class="div1"></div>
+
+		<!--**********************JS Part Start**********-->
+
+		<!--****?JS CDN***-->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<!--****?OWN JS***-->
+		<script>
+			$(document).ready(function () {
+				$(".btnPicker").click(function () {
+					$(".navPicker").addClass("active");
+				});
+
+				$(".closeIconPicker").click(function () {
+					$(".navPicker").removeClass("active");
+				});
+			});
+		</script>
+	</body>
+</html>

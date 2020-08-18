@@ -1,0 +1,84 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.navWrapper {
+	position: relative;
+}
+.navWrapper .btnWrapper {
+	width: 100%;
+	height: auto;
+	background: brown;
+	padding: 10px;
+}
+.navWrapper .btnWrapper .toggleBtn {
+	height: 45px;
+	width: 45px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: 2%;
+}
+.navWrapper .btnWrapper .toggleBtn .bar {
+	display: block;
+	width: 35px;
+	height: 5px;
+	background: goldenrod;
+	margin-bottom: 15%;
+}
+/******Toogle slide part****/
+.navWrapper .nav {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 250px;
+	background: olive;
+	position: fixed;
+}
+.navWrapper .navPicker {
+	left: -100%;
+	transition: all 0.8s;
+}
+.navWrapper .navPicker.active {
+	left: 0;
+}
+.navWrapper .nav .iconWrapper {
+	text-align: right;
+	padding-top: 5%;
+	padding-right: 5%;
+	font-size: 2rem;
+}
+.navWrapper .nav li {
+	padding-left: 13%;
+	padding-top: 5%;
+	list-style: none;
+	position: relative;
+}
+.navWrapper .nav li:first-child {
+	padding-top: 20%;
+}
+.navWrapper .nav li::before {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 5px;
+	background: blue;
+	bottom: 20%;
+	left: 10%;
+	transition: all 0.5s;
+}
+.navWrapper .nav li:hover::before {
+	width: calc(100% - 60%);
+}
+.navWrapper .nav li a {
+	display: block;
+	text-decoration: none;
+	color: palegoldenrod;
+	font-weight: 800;
+	font-size: x-large;
+}
+
+.navWrapper .nav li a:hover {
+}
